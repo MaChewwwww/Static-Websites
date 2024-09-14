@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Booking App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url(bg.jpg);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-100 fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#Home">
+            <img src="logo2.png  " alt="Your Logo" style="width: 40px; height: auto;" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="#our-story">Our Story</a></li>
+                            <li><a class="dropdown-item" href="#mission-vision">Mission & Vision</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="#transpo">Transportation</a></li>
+                            <li><a class="dropdown-item" href="#transpo">Delivery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Partnership</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                            <li><a class="dropdown-item" href="#silver">Grab</a></li>
+                            <li><a class="dropdown-item" href="#gold">Angkas</a></li>
+                            <li><a class="dropdown-item" href="#diamond">Move it</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                  <a href="#booking" class="btn btn-primary me-2">Book Now</a>
+              </div>         
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4 p-4" id="Home">
+        <div class="container mt-4 p-4">
+            <div class="row bg-dark bg-opacity-75 ml-4">
+                <div class="col-md-7 bg-primary p-lg-4 m-4 shadow-lg py-2" style="background-image: url(bg2.jpg);">
+                  <h1 class="display-2 fw-bold text-white text-uppercase text-shadow">Touch it Co.</h1>
+                    <p class="lead text-white fw-bold p-lg-2">GranVille Homes Malagasang 2B, Imus Cavite</p>
+                </div>
+                <div class="col-md-4 p-4 d-flex align-items-center>
+                    <!-- Slideshow without zooming transition -->
+                    <div id="slideshow" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="2000">
+                        <!-- 3000ms = 3 seconds -->
+                        <div class="carousel-inner bg-primary bg-gradient">
+                            <div class="carousel-item active">
+                                <img src="images/1.jpg" class="d-block w-100 border-glow" alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/2.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/3.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="images/4.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="images/5.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="images/6.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                            </div>
+                            <!-- Add more images here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    
+      <div class="container bg-dark bg-opacity-75 p-4 text-white" id="booking">
+        <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">
+            <img src="logo2.png" alt="Your Logo" style="width: 100px; height: auto;" class="img-fluid m-4">Booking a Ride
+        </h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form id="bookingForm">
+                    <div class="form-group m-2">
+                        <label for="from">Pick-Up Location:</label>
+                        <!-- Remove Sender's name input -->
+                        <input type="text" class="form-control mt-2" id="fromStreet" value="Carmelita St." readonly>
+                        <input type="text" class="form-control mt-2" id="fromBarangay" value="Sampalucan" readonly>
+                        <input type="text" class="form-control mt-2" id="fromCity" value="General Trias" readonly>
+                        <input type="text" class="form-control mt-2" id="fromRegion" value="Cavite" readonly>
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="to">Drop-off Location:</label>
+                        <input type="text" class="form-control" id="toName" placeholder="Passenger's name" required>
+                        <input type="text" class="form-control mt-2" id="toStreet" placeholder="Street" required>
+                        <input type="text" class="form-control mt-2" id="toBarangay" placeholder="Barangay" required>
+                        <input type="text" class="form-control mt-2" id="toCity" placeholder="City" required>
+                        <input type="text" class="form-control mt-2" id="toRegion" placeholder="Region" required>
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="distance">Distance (km):</label>
+                        <input type="text" class="form-control" id="distance" readonly>
+                    </div>
+                    <div class="form-group m-2">
+                        <button type="button" id="calculateButton" class="btn btn-primary mt-4">Calculate Distance</button>
+                        <button type="button" id="bookButton" class="btn btn-success mt-4">Book</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8 mt-2 p-4">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal for receipt -->
+    <div class="modal fade" id="receiptModal" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="receiptModalLabel">Booking Receipt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="receiptContent"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-4 p-4" id="our-story"></div>
+
+    <div class="row mt-5 p-4 bg-dark bg-opacity-75" id="our-story">
+        <div class="col-md-12 bg-dark bg-gradient bg-opacity-50 m-4 pb-4">
+            <h1 class="text-center mb-4 pt-2 display-2 fw-bold text-white text-shadow">Our Story</h1>
+            <div class="container shadow-lg p-4 border-3" style="background-image: url(bg2.jpg);">
+                <p class="lead text-white">In a world where connectivity is paramount, Touch It Co. emerges as a beacon of technological innovation. Our web app serves as a gateway to a realm where boundaries blur, connections thrive, and opportunities abound. Whether you're an entrepreneur seeking collaboration or a student hungry for knowledge, Touch It Co. offers a seamless platform to navigate the digital landscape.</p>
+                <p class="lead text-white">Step into our world where every click, swipe, and tap opens doors to endless possibilities. With Touch It Co., the power to connect, collaborate, and create is at your fingertips. Join us on this journey where technology and humanity converge, and let's redefine the way we interact with the world around us.</p>
+                <p class="lead text-white">Welcome to Touch It Co. - where every interaction is an adventure, and every connection is an opportunity. Let's embark on this exhilarating voyage together, and let's touch the future.
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container mt-4 p-4" id="mission-vision"></div>
+  
+  <div class="row mt-5">
+    <div class="col-md-6">
+        <div class="container bg-primary bg-dark bg-opacity-75 shadow-lg p-4" >
+            <!-- Content for the first column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Mission</h1>
+            <img src="images/mission.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-2 border-2" alt="Vision Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4" style="background-image: url(bg2.jpg);">
+                <p class="lead text-white">Our mission is to help students and commuters to provide convenient and reliable access of transportation with real-time schedules and reduce time, specially in situations where they are lack of data or low battery issues. Through our innovative kiosk machine it will access users information and complete transactions safely.</p>                          
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container bg-dark bg-opacity-75 p-4">
+            <!-- Content for the second column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Vision</h1>
+            <img src="images/vision.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-2 border-2" alt="Vision Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4" style="background-image: url(bg2.jpg);">
+                <p class="lead text-white">Our vision at Touch It Co. is to be the leading provider of digital solutions that enrich lives and inspire growth on a global scale. We envision a future where our web applications serve as the cornerstone of seamless connectivity, fostering a world where distance is no longer a barrier to collaboration and innovation. Through our unwavering dedication to innovation, integrity, and inclusivity, we aim to create a digital ecosystem where every touchpoint leaves a lasting impact, empowering individuals and communities to thrive in an ever-evolving digital landscape.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container mt-4 p-4" id="transpo"></div>
+
+  <div class="row mt-5 p-2 bg-dark bg-opacity-75" id="transpo">
+    <div class="col-md-12 bg-dark mb-4">
+        <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Services</h1>
+        <div class="container shadow-lg p-4 border-3" style="background-image: url(bg2.jpg);">
+            <p class="lead text-white">Welcome to Touch It Co., your ultimate destination for seamless transportation and delivery solutions. From beating the traffic with our efficient transportation options to ensuring your parcels reach you swiftly and securely, we've got your logistics needs covered. With a relentless focus on efficiency, safety, and customer satisfaction, our services are designed to simplify your daily life. Join us as we redefine convenience in transportation and delivery, one touch at a time. Experience the ease and reliability of Touch It Co. and let us be your trusted partner in navigating the modern world.   </p>
+        </div>
+    </div>
+</div>
+
+  <div class="row mt-5">
+    <div class="col-md-6">
+        <div class="container bg-dark bg-opacity-75 shadow-lg p-4">
+            <!-- Content for the first column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Transportation</h1>
+            <img src="images/transpo.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-4 border border-3" alt="Mission Image" style="width: 800px;">
+            <div class="container shadow-lg p-4 border-3" style="background-image: url(bg2.jpg);">
+                <p class="lead text-white">Say goodbye to waiting and hello to convenience with Touch It Co.'s delivery services. Whether it's documents, packages, or your favorite meal from a local restaurant, our swift and secure delivery options ensure your items reach you promptly and in pristine condition. With real-time tracking and reliable couriers, you can trust us to handle your deliveries with care, leaving you free to enjoy life's moments without interruption. From important documents to delicious meals, trust Touch It Co.'s delivery services to bring convenience to your doorstep. With our efficient delivery network and commitment to timely service, you can relax knowing your items are in good hands, allowing you to focus on what matters most while we handle the logistics.</p>                          
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" id="corporate-events">
+        <div class="container bg-dark bg-opacity-75 shadow-lg p-4">
+            <!-- Content for the second column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Delivery</h1>
+            <img src="images/delivery.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-4 border-3" alt="Vision Image" style="height: 440px;">
+            <div class="container shadow-lg p-4 border-3" style="background-image: url(bg2.jpg);">
+                <p class="lead text-white">Say goodbye to waiting and hello to convenience with Touch It Co.'s delivery services. Whether it's documents, packages, or your favorite meal from a local restaurant, our swift and secure delivery options ensure your items reach you promptly and in pristine condition. With real-time tracking and reliable couriers, you can trust us to handle your deliveries with care, leaving you free to enjoy life's moments without interruption. From important documents to delicious meals, trust Touch It Co.'s delivery services to bring convenience to your doorstep. With our efficient delivery network and commitment to timely service, you can relax knowing your items are in good hands, allowing you to focus on what matters most while we handle the logistics.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 p-4" id="silver"></div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class="container-fluid bg-dark bg-opacity-75 shadow-lg p-4" >
+            <!-- Content for the column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Partnership</h1>
+            <p class="lead text-white p-3" style="background-image: url(bg2.jpg);">Embark on a transformative journey by collaborating with Touch It Co., where industry titans like Grab, Angkas, and MotoTaxi converge to shape the future of transportation and delivery; together, we harness our collective expertise and resources to pioneer innovative solutions, redefining the way individuals navigate and receive goods, while forging strategic alliances that not only propel success but also cultivate a dynamic ecosystem of mobility solutions, thus laying the groundwork for a future where convenience, efficiency, and sustainability intersect seamlessly.
+            </p>
+            
+            <!-- Silver Package -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="bg-primary p-4" style="background-image: url(bg2.jpg);">
+                        <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Grab</h2>
+                        <ul class="text-white fs-5">
+                            <li>Angkas is a leading motorcycle ride-hailing service in the Philippines, providing fast and affordable transportation solutions.</li>
+                            <li>Motorcycle Rides: Book a motorcycle ride with Angkas for quick and convenient travel, especially during heavy traffic.</li>
+                            <li>Delivery Services: Use Angkas for reliable delivery services, whether it’s documents, parcels, or food items.</li>
+                            <li>Real-time Tracking: Track your ride in real-time and get updates on your rider’s location and estimated arrival time.</li>
+                            <li>Safety Gear: Angkas provides safety gear, including helmets and hairnets, to ensure your safety during the ride.</li>
+                            <li>Cashless Payment: Pay for your ride using various cashless options, including credit/debit cards and mobile wallets.</li>
+                            <li>Professional Riders: Angkas riders are trained and certified to ensure a safe and efficient ride experience.</li>
+                            <li>Insurance Coverage: Enjoy peace of mind with insurance coverage for every ride, ensuring safety and security for both rider and passenger.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/grab.jpg'); background-size: cover; background-position: center; height: 640px;">
+                </div>
+            </div>
+            
+            <!-- Gold Package -->
+            <div class="row mb-4" id="gold">
+                <div class="col-md-6">
+                    <div class="bg-primary p-4" style="background-image: url(bg2.jpg);">
+                        <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Angkas</h2>
+                        <ul class="text-white fs-5">
+                            <li>MotoTaxi is a convenient and cost-effective motorcycle ride-hailing service, ideal for navigating through traffic efficiently.</li>
+                            <li>Motorcycle Rides: Book a motorcycle ride with MotoTaxi for quick and hassle-free transportation, especially during rush hours.</li>
+                            <li>Delivery Services: Use MotoTaxi for fast and reliable delivery services, including parcels, documents, and food items.</li>
+                            <li>Real-time Tracking: Track your ride in real-time and receive updates on your rider’s location and estimated time of arrival.</li>
+                            <li>Safety Gear: MotoTaxi provides essential safety gear, such as helmets and disposable hairnets, for a safe ride experience.</li>
+                            <li>Cashless Payment: Pay for your ride using various cashless options, including credit/debit cards and mobile wallets.</li>
+                            <li>Professional Riders: MotoTaxi riders undergo training and certification to ensure a safe and professional ride experience.</li>
+                            <li>Insurance Coverage: Benefit from insurance coverage on every ride, ensuring safety and peace of mind for both rider and passenger.</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/angkas.jpeg'); background-size: cover; background-position: center; height: 640px;">
+                </div>
+            </div>
+            
+            <!-- Diamond Package -->
+            <div class="row" id="diamond">
+                <div class="col-md-6">
+                    <div class="bg-primary p-4" style="background-image: url(bg2.jpg);">
+                        <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Move it</h2>
+                        <ul class="text-white fs-5">
+                            <li>Indulge in luxury with our Diamond Package, designed for those seeking the ultimate culinary experience for their special occasion.</li>
+                            <li>Delight in a gourmet feast featuring the finest ingredients and exquisite culinary creations, meticulously crafted to perfection.</li>
+                            <li>Our Diamond Package includes premium service enhancements such as personalized menu consultations, VIP treatment for guests, and exclusive add-ons to ensure an unforgettable dining experience worthy of celebration.</li>
+                            <li>Experience the epitome of elegance with upscale decor options, lavish table settings, and attentive butler service, creating a truly unforgettable atmosphere for your event.</li>
+                            <li>Enjoy exclusive access to our chef's table experience, where you can interact with our culinary team and indulge in bespoke creations tailored to your preferences.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/moveit.jpg'); background-size: cover; background-position: center; height: 49          0px;">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+<footer class="bg-dark text-white py-4 mt-4" id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="fw-bold">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-envelope me-2"></i>Email: touchitcorporation@gmail.com</li>
+                    <li><i class="fa-solid fa-phone me-2"></i>Phone: +63 912 345 6789</li>
+                    <li><i class="fa-solid fa-location-dot me-2"></i>Address: Dasmarinas, Cavite</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5 class="fw-bold">Follow Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item mt-2">
+                        <a href="https://www.facebook.com/share/uaB7Y6nUhuBGr9xn/?mibextid=qi2Omg"><img src="fb.png" class="fa-brands fa-facebook me-2 img-fluid" style="height: 50px;"></a>
+                        <a href="https://www.facebook.com/share/uaB7Y6nUhuBGr9xn/?mibextid=qi2Omg"><img src="yt.png" class="fa-brands fa-facebook me-2 img-fluid" style="height: 60px;"></a>
+                    </i>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+</html>

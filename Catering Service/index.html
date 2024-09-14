@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering Service</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link href="styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#Home">
+        <img src="logo.png" alt="Your Logo" style="width: 40px; height: auto;">
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                        <li><a class="dropdown-item" href="#our-story">Our Story</a></li>
+                        <li><a class="dropdown-item" href="#mission-vision">Mission & Vision</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catering</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                        <li><a class="dropdown-item" href="#weddings">Weddings</a></li>
+                        <li><a class="dropdown-item" href="#corporate-events">Corporate Events</a></li>
+                        <li><a class="dropdown-item" href="#private-parties">Private Parties</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Packages</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                        <li><a class="dropdown-item" href="#silver">Silver</a></li>
+                        <li><a class="dropdown-item" href="#gold">Gold</a></li>
+                        <li><a class="dropdown-item" href="#diamond">Diamond</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                        <li><a class="dropdown-item" href="#indoor">Indoor</a></li>
+                        <li><a class="dropdown-item" href="#outdoor">Outdoor</a></li>
+                        <li><a class="dropdown-item" href="#destination">Destination</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+              <a href="#booking" class="btn btn-primary me-2">Book Now</a>
+          </div>         
+        </div>
+    </div>
+</nav>
+
+  <!-- Page Content -->
+  <div class="container-fluid" id="Home">
+    <div class="container mt-5">
+        <div class="row bg-dark ml-4">
+            <div class="col-md-7 bg-primary bg-gradient p-lg-4 m-4  shadow-lg py-2">
+              <h1 class="display-2 fw-bold text-white text-uppercase text-shadow">Divine Flavors <br>by Christian</h1>
+                <p class="lead m-lg-2 text-white">#51 Viñalon Street<br>Simundac Compound<br>Cupang Muntinlupa City</p>
+                <p class="lead m-lg-2 text-white">Email: christianleblanczxc1@gmail.com</p>
+            </div>
+            <div class="col-md-3 d-flex align-items-center mx-4">
+                <!-- Slideshow without zooming transition -->
+                <div id="slideshow" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
+                    <!-- 3000ms = 3 seconds -->
+                    <div class="carousel-inner bg-primary bg-gradient">
+                        <div class="carousel-item active">
+                            <img src="images/catering.jpg" class="d-block w-100 border-glow" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/catering1.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/catering9.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/catering8.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/catering10.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/catering11.jpg" class="d-block w-100 border-glow" alt="Image 2">
+                        </div>
+                        <!-- Add more images here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="row mt-5 bg-dark" id="our-story">
+        <div class="col-md-12 bg-dark mb-4">
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Our Story</h1>
+            <div class="container bg-primary bg-gradient shadow-lg p-4">
+                <p class="lead text-white">In the bustling town where young chef-in-training Christian resided, his culinary aspirations merged seamlessly with his academic pursuits as he embarked on a school project to conceptualize a catering business. Inspired by his passion for cooking and his unwavering dedication to his studies, he aptly named his venture "Christian's Culinary Creations." With meticulous attention to detail, Christian crafted a diverse menu that showcased his culinary skills and innovative approach to food. He envisioned his business not only as a means to showcase his talents but also as an opportunity to contribute to the local community by providing unique and delicious dining experiences.</p>
+                <p class="lead text-white">As Christian presented his project to his classmates and instructors, his enthusiasm and commitment to his craft shone brightly. He articulated his vision for "Christian's Culinary Creations" with clarity, emphasizing his desire to offer exceptional culinary experiences that would leave a lasting impression on customers. His peers and instructors applauded his creativity and thoughtful approach, recognizing the potential for his project to blossom into a successful venture beyond the classroom walls.</p>
+                <p class="lead text-white">While initially conceived as a school project, Christian couldn't help but feel a sense of excitement about the future possibilities. He saw "Christian's Culinary Creations" not just as an academic exercise but as a stepping stone toward his dream of owning his own catering business one day. With each step of the project, Christian grew more confident in his abilities and more determined to turn his passion for cooking into a fulfilling career.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+  <div class="row mt-5" id="mission-vision">
+    <div class="col-md-6">
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <!-- Content for the first column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Mission</h1>
+            <img src="images/mission.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-2 border-2" alt="Vision Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4">
+                <p class="lead text-white">At Christian's Culinary Blessings, our mission is rooted in a deep commitment to serving both the physical and spiritual nourishment of our clients. With each dish we create, we strive to go beyond the ordinary and deliver extraordinary culinary experiences that reflect our passion for cooking and our Christian values. Our dedication to excellence is evident in every aspect of our catering service, from the selection of the freshest ingredients to the meticulous attention to detail in presentation. We believe that food has the power to bring people together, and it is our mission to facilitate moments of connection, celebration, and joy through our meals.</p>                          
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <!-- Content for the second column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Vision</h1>
+            <img src="images/vision.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-2 border-2" alt="Vision Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4">
+                <p class="lead text-white">Our vision at Christian's Culinary Blessings is to be recognized as the premier provider of catering services that seamlessly blend culinary artistry with heartfelt hospitality and Christian principles. We envision a future where our name is synonymous with exceptional quality, service, and integrity in the catering industry. As we continue to grow and expand our reach, we remain steadfast in our commitment to upholding our values of love, compassion, and generosity in all that we do. We aspire to create a legacy of culinary excellence and genuine hospitality that enriches the lives of our clients and communities, one event at a time.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 bg-dark">
+    <div class="col-md-12 bg-dark mb-4">
+        <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Catering</h1>
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <p class="lead text-white">Catering, a service industry dedicated to providing food and beverage options for events, plays a vital role in simplifying the logistics of hosting gatherings, be they small intimate affairs or grandiose celebrations. Caterers bring a level of professionalism and expertise to the table, handling everything from menu planning to food preparation, presentation, and service. This allows hosts to focus on other aspects of their event planning, knowing that the culinary aspects are in capable hands. With a diverse range of menu options and the ability to customize offerings to suit various tastes, dietary needs, and themes, caterers offer flexibility and personalization to ensure that every event is unique and memorable. Moreover, catering enhances the overall guest experience by providing delicious food that delights the senses and contributes to the ambiance of the occasion, all while saving time for both hosts and guests. In essence, catering transforms events into seamless and enjoyable experiences, where guests can indulge in culinary delights while hosts can relax and enjoy the festivities knowing that their guests are well taken care of.</p>
+        </div>
+    </div>
+</div>
+
+  <div class="row mt-5">
+    <div class="col-md-4" id="weddings">
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <!-- Content for the first column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Weddings</h1>
+            <img src="images/catering3.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-4 border border-3" alt="Mission Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4">
+                <p class="lead text-white">Wedding catering is a specialized service tailored to the unique needs and desires of couples celebrating their union. Caterers for weddings understand the significance of this momentous occasion and work closely with the couple to create a culinary experience that reflects their love story and personal tastes. From elegant sit-down dinners to lavish buffet spreads or themed food stations, wedding caterers offer a wide range of menu options to suit the style and theme of the wedding. Attention to detail in presentation, service, and customization is paramount, ensuring that every aspect of the dining experience contributes to the magic and romance of the day. Wedding catering goes beyond just providing food; it's about creating unforgettable moments and cherished memories that the couple and their guests will treasure for a lifetime.</p>                          
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" id="corporate-events">
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <!-- Content for the second column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Corporate Event</h1>
+            <img src="images/catering2.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-4 border-3" alt="Vision Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4">
+                <p class="lead text-white">Corporate catering caters to the needs of businesses and organizations hosting meetings, conferences, seminars, or corporate events. Caterers for corporate events understand the importance of professionalism, efficiency, and reliability in catering to the unique requirements of corporate clients. They offer diverse menu options that cater to a range of dietary preferences and restrictions, ensuring that all attendees are accommodated. Whether it's a working lunch, cocktail reception, or formal dinner, corporate caterers deliver high-quality food and service that aligns with the company's brand image and enhances the overall experience for clients, employees, and guests. Timeliness, attention to detail, and the ability to accommodate last-minute changes are key features of corporate catering, reflecting the dynamic and fast-paced nature of the business world.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" id="private-parties">
+        <div class="container bg-primary bg-gradient shadow-lg p-4">
+            <!-- Content for the third column -->
+            <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Private Parties</h1>
+            <img src="images/catering4.jpg" class="img-fluid mx-auto d-block mb-4 border border-dark rounded-4 border-3" alt="Values Image">
+            <div class="container bg-primary bg-dark shadow-lg p-4">
+                <p class="lead text-white">Private party catering encompasses a wide range of social events hosted in private residences or rented venues, including birthday parties, anniversary celebrations, holiday gatherings, and family reunions. Caterers for private parties understand the importance of creating a warm and inviting atmosphere where guests can relax and enjoy themselves. They offer customizable menu options that cater to the preferences and tastes of the host and their guests, whether it's casual finger foods, themed buffets, or formal plated dinners. Private party caterers also provide additional services such as bartending, rentals, and event coordination to ensure that every aspect of the party is seamless and stress-free for the host. With attention to detail, creativity, and a focus on hospitality, private party caterers help hosts create unforgettable experiences that leave a lasting impression on their guests.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-12">
+      <div class="container-fluid bg-primary bg-gradient shadow-lg p-4">
+          <!-- Content for the column -->
+          <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Packages</h1>
+          <p class="lead text-white bg-gradient bg-dark p-3">Our catering packages are carefully curated to meet the diverse needs of our clients, offering a range of options suitable for various occasions. For weddings, we provide customizable packages tailored to the couple's vision, encompassing everything from elegant plated dinners to themed buffet spreads. Our corporate catering packages are designed to impress clients and colleagues alike, featuring diverse menu selections suitable for meetings, conferences, and networking events. For private parties, our packages offer flexibility and customization to accommodate the host's preferences, whether it's a casual gathering with finger foods or a formal celebration with plated dinners. With each package, we prioritize quality, creativity, and attentive service to ensure that every event is a memorable success.</p>
+          
+          <!-- Silver Package -->
+          <div class="row mb-4" id="silver">
+              <div class="col-md-6">
+                  <div class="bg-primary bg-gradient bg-dark p-4">
+                      <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Silver Package</h2>
+                      <ul class="text-white fs-5">
+                          <li>Our Silver Package offers a selection of delicious menu options suitable for various events, including weddings, corporate functions, and private parties.</li>
+                          <li>Features include customizable menu selections tailored to your preferences and budget, ensuring a memorable dining experience for you and your guests.</li>
+                          <li>Enjoy professional catering service with courteous staff, timely delivery, and setup, guaranteeing a hassle-free event.</li>
+                          <li>Flexible package options allow for easy customization, accommodating dietary restrictions, theme preferences, and guest count changes.</li>
+                          <li>Complimentary amenities such as basic tableware, linens, and serving utensils are included, adding convenience and value to your event.</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/Catering5.jpg'); background-size: cover; background-position: center; height: 400px;">
+              </div>
+          </div>
+          
+          <!-- Gold Package -->
+          <div class="row mb-4" id="gold">
+              <div class="col-md-6">
+                  <div class="bg-primary bg-gradient bg-dark shadow-lg p-4">
+                      <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Gold Package</h2>
+                      <ul class="text-white fs-5">
+                          <li>Elevate your event with our Gold Package, which includes an expanded menu selection and enhanced service options to meet your specific needs.</li>
+                          <li>Enjoy a wider range of culinary delights, from gourmet appetizers to premium entrees, curated to impress even the most discerning palates.</li>
+                          <li>With added features such as professional bartending services and upgraded presentation, our Gold Package delivers an elevated catering experience that exceeds expectations.</li>
+                          <li>Benefit from dedicated event coordination and personalized attention from our experienced team, ensuring flawless execution and guest satisfaction.</li>
+                          <li>Additional enhancements such as specialty dessert stations, themed decor, and custom cocktail menus are available to enhance the ambiance of your event.</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/catering6.jpg'); background-size: cover; background-position: center; height: 400px;">
+              </div>
+          </div>
+          
+          <!-- Diamond Package -->
+          <div class="row" id="diamond">
+              <div class="col-md-6">
+                  <div class="bg-primary bg-gradient bg-dark shadow-lg p-4">
+                      <h2 class="text-center mb-4 display-3 fw-bold text-white text-shadow">Diamond Package</h2>
+                      <ul class="text-white fs-5">
+                          <li>Indulge in luxury with our Diamond Package, designed for those seeking the ultimate culinary experience for their special occasion.</li>
+                          <li>Delight in a gourmet feast featuring the finest ingredients and exquisite culinary creations, meticulously crafted to perfection.</li>
+                          <li>Our Diamond Package includes premium service enhancements such as personalized menu consultations, VIP treatment for guests, and exclusive add-ons to ensure an unforgettable dining experience worthy of celebration.</li>
+                          <li>Experience the epitome of elegance with upscale decor options, lavish table settings, and attentive butler service, creating a truly unforgettable atmosphere for your event.</li>
+                          <li>Enjoy exclusive access to our chef's table experience, where you can interact with our culinary team and indulge in bespoke creations tailored to your preferences.</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-6 border border-dark rounded-4 border-3" style="background-image: url('images/catering7.jpg'); background-size: cover; background-position: center; height: 400px;">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<h1 class="text-center mb-2 display-2 fw-bold text-dark text-shadow mt-4">Venue</h1>
+<p class="text-center mb-4 text-dark fs-3">Choose your preferred venue classification :</p>
+<div class="row">
+    <div class="col-md-4" id="indoor">
+        <div class="bg-primary bg-gradient bg-dark p-4 mb-4">
+            <h2 class="text-center mb-4 display-4 fw-bold text-white text-shadow">Indoor</h2>
+            <p class="text-white fs-5">Indoor catering brings the culinary experience to the comfort of your chosen venue, whether it's a banquet hall, conference center, or private residence. Our indoor catering services provide a seamless dining experience, with carefully curated menus and professional service tailored to your event's needs. From intimate gatherings to grand celebrations, we ensure that every detail is meticulously executed, leaving you free to enjoy your event without worry.</p>
+            <img src="images/indoor.jpg" class="img-fluid mx-auto d-block rounded-3" alt="Indoor Venue Image" style="max-width: 80%; height: auto;">
+        </div>
+    </div>
+    <div class="col-md-4" id="outdoor">
+        <div class="bg-primary bg-gradient bg-dark p-4 mb-4">
+            <h2 class="text-center mb-4 display-4 fw-bold text-white text-shadow">Outdoor</h2>
+            <p class="text-white fs-5">Outdoor catering embraces the beauty of nature as the backdrop for your event, whether it's a garden party, picnic, or barbecue. Our outdoor catering services are designed to complement the outdoor ambiance, with menus featuring fresh, seasonal ingredients and flavors that celebrate the great outdoors. With expertise in outdoor logistics and a commitment to quality, we ensure that your al fresco dining experience is both delicious and memorable.</p>
+            <img src="images/outdoor.jpeg" class="img-fluid mx-auto d-block rounded-3" alt="Outdoor Venue Image" style="max-width: 80%; height: auto;">
+        </div>
+    </div>
+    <div class="col-md-4" id="destination">
+        <div class="bg-primary bg-gradient bg-dark p-4 mb-4">
+            <h2 class="text-center mb-4 display-4 fw-bold text-white text-shadow">Destination</h2>
+            <p class="text-white fs-5">Destination catering transforms your event into an unforgettable experience in a unique and scenic location, whether it's a beach, mountain retreat, or vineyard celebration. Our destination catering services offer custom menus inspired by the local cuisine and culture, providing a culinary journey that reflects the spirit of the destination. With proper planning and attention to detail, we bring the flavors of your chosen destination to life, creating memories that will last a lifetime.</p>
+            <img src="images/destination.png" class="img-fluid mx-auto d-block rounded-3" alt="Destination Venue Image" style="max-width: 80%; height: auto;">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row mt-2" id="booking">
+  <div class="col-md-8 offset-md-2">
+      <div class="container-fluid bg-primary bg-gradient shadow-lg p-4 rounded-3 border border-dark">
+          <h1 class="text-center mb-4 display-2 fw-bold text-white text-shadow">Booking Form</h1>
+          <form id="bookingForm" class="row g-3">
+              <div class="col-md-6">
+                  <label for="inputName" class="form-label text-white">Name</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+              </div>
+              <div class="col-md-6">
+                  <label for="inputEmail" class="form-label text-white">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+              </div>
+              <div class="col-12">
+                  <label for="inputPhone" class="form-label text-white">Phone</label>
+                  <input type="tel" class="form-control" id="inputPhone" placeholder="Enter your phone number">
+              </div>
+              <div class="col-md-6">
+                  <label for="inputDate" class="form-label text-white">Date</label>
+                  <input type="date" class="form-control" id="inputDate">
+              </div>
+              <div class="col-md-6">
+                  <label for="inputTime" class="form-label text-white">Time</label>
+                  <input type="time" class="form-control" id="inputTime">
+              </div>
+              <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-light btn-lg">Submit</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- Success Popup Message -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+              <h5 class="modal-title" id="successModalLabel">Success!</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Your booking has been successfully submitted.
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript function to show success message
+  function showSuccessMessage() {
+      $('#successModal').modal('show');
+  }
+</script>
+
+<footer class="bg-dark text-white py-4 mt-4" id="contact-us">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h5>Contact Us</h5>
+              <ul class="list-unstyled">
+                  <li>Email: christianleblanczxc1@gmail.com</li>
+                  <li>Phone: +63 912 345 6789</li>
+                  <li>Address: #51 Viñalon Street Simundac Compound Cupang Muntinlupa City</li>
+              </ul>
+          </div>
+          <div class="col-md-6">
+              <h5>Follow Us</h5>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#" class="text-white">https://www.culinaryblessings.com/social/profile<i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter">https://www.youtube.com/c/CulinaryBlessingsVideos</i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
